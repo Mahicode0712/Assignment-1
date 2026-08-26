@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-// 1. Create File
+//Create File
 fs.writeFile("data.txt", "Hello, this is my Smart Utility Toolkit.", (err) => {
   if (err) {
     console.log("Error creating file:", err);
@@ -9,7 +9,7 @@ fs.writeFile("data.txt", "Hello, this is my Smart Utility Toolkit.", (err) => {
 
   console.log("File created successfully!");
 
-  // 2. Read File
+  //Read File
   fs.readFile("data.txt", "utf8", (err, data) => {
     if (err) {
       console.log("Error reading file:", err);
@@ -18,7 +18,7 @@ fs.writeFile("data.txt", "Hello, this is my Smart Utility Toolkit.", (err) => {
 
     console.log("File content:", data);
 
-    // 3. Update File
+    //Update File
     fs.appendFile("data.txt", "\nThis file has been updated.", (err) => {
       if (err) {
         console.log("Error updating file:", err);
@@ -27,7 +27,7 @@ fs.writeFile("data.txt", "Hello, this is my Smart Utility Toolkit.", (err) => {
 
       console.log("File updated successfully!");
 
-      // 4. Delete File
+      //Delete File
       fs.unlink("data.txt", (err) => {
         if (err) {
           console.log("Error deleting file:", err);

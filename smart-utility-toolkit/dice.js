@@ -1,3 +1,4 @@
+//----------Dice Roller----------//
 const crypto = require("crypto");
 
 function rollDice() {
@@ -8,3 +9,4 @@ function rollDice() {
 for (let i = 1; i <= 5; i++) {
   console.log("Dice Roll " + i + ": " + rollDice());
 }
+//---------finish----------//
