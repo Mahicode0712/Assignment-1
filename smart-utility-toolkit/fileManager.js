@@ -1,7 +1,15 @@
 const fs = require("fs");
 
 //Create File
-fs.writeFile("data.txt", "Hello, this is my Smart Utility Toolkit.", (err) => {
+const filePath = './dummy.txt';
+
+// 1. Create the file and write three lines
+const initialContent = 
+`This is the first line of the file.
+This is the second line, still learning fs module.
+This is the third and final line of initial content.`;
+
+fs.writeFile(filePath, initialContent, (err) => {
   if (err) {
     console.log("Error creating file:", err);
     return;
@@ -10,7 +18,7 @@ fs.writeFile("data.txt", "Hello, this is my Smart Utility Toolkit.", (err) => {
   console.log("File created successfully!");
 
   //Read File
-  fs.readFile("data.txt", "utf8", (err, data) => {
+  fs.readFile(data.text, "utf8", (err, data) => {
     if (err) {
       console.log("Error reading file:", err);
       return;
@@ -19,7 +27,7 @@ fs.writeFile("data.txt", "Hello, this is my Smart Utility Toolkit.", (err) => {
     console.log("File content:", data);
 
     //Update File
-    fs.appendFile("data.txt", "\nThis file has been updated.", (err) => {
+    fs.appendFile(filePath, "\nThis file has been updated.", (err) => {
       if (err) {
         console.log("Error updating file:", err);
         return;
