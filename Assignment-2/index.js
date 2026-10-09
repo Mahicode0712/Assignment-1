@@ -5,7 +5,7 @@ const logger = require("./middleware/logger");
 
 const app = express();
 
-//its read the middleware and parse the incoming request body as json data.
+
 app.use(express.json());
 
 app.use(logger);
@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
     });
 });
 
-//this will handle the 404 error if the route is not found.
+
 app.use((req, res) => {
     res.status(404).json({
         message: "Route not found"

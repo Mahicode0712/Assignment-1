@@ -3,13 +3,13 @@ const router = express.Router();
 
 const students = require("../data/student");
 
-//gets the all students
+
 router.get("/", (req, res) => {
     res.status(200).json(students);
 });
 
 
-// get student by ID
+
 router.get("/:id", (req, res) => {
     const id = parseInt(req.params.id);
 
@@ -25,7 +25,7 @@ router.get("/:id", (req, res) => {
 });
 
 
-//adds new student to the list of students
+
 router.post("/", (req, res) => {
     const { name, course } = req.body;
 
@@ -50,7 +50,7 @@ router.post("/", (req, res) => {
 });
 
 
-//this updates the students
+
 router.put("/:id", (req, res) => {
     const id = parseInt(req.params.id);
 
@@ -80,7 +80,7 @@ router.put("/:id", (req, res) => {
 });
 
 
-//this deletes the students
+
 router.delete("/:id", (req, res) => {
     const id = parseInt(req.params.id);
 
